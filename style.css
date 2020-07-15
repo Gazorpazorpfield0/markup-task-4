@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+body {
+    margin: 0;
+}
+
+header {
+    height: 300px;
+    text-align: center;
+    border-bottom: 1px solid black;;
+}
+
+header h1 {
+    font-family: "Grenze Gotisch";
+    display: inline-block;
+    font-size: 130px;
+    margin: 0px 95px;
+}
+
+p {
+    font-family: 'Inconsolata', monospace;
+}
+
+article {
+    margin: 0 10px;
+}
+
+.article__header {
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.article__text {
+    text-align: justify;
+}
+
+.article__text::first-letter {
+    font-size: 1.5em;
+    color: red;
+    text-align: justify;
+}
+
+.info {
+    width: 300px;
+    margin: 50px 0px;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+.info__header {
+    text-transform: uppercase;
+}
+
+.info__text {
+    font-size: 15px;
+}
+
+.content {
+    margin: 3px 0;
+    height: 1500px;
+    overflow: hidden;
+    transition: 1s;
+    border-bottom: 1px solid black;;;
+}
+
+.separator {
+    margin-top: 3px;
+    height: 30px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.separator__header {
+    margin: 6px 0;
+}
+
+.columns {
+    column-count: 2;
+    column-rule: 2px solid black;
+    border-top: 1px solid black;;
+    border-bottom: 1px solid black;
+    margin-top: 2px;
+    padding-top: 3px;
+}
+
+.left-side {
+    float: left;
+    column-count: 4;
+    column-rule: 1px solid black;
+}
+
+.right-side {
+    display: inline-block;
+}
+
+.right-side__header {
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+    padding: 30px 50px;
+}
+
+.right-side__left-column {
+    width: 25%;
+    float: left;
+}
+
+.main-article {
+    width: 75%;
+    display: inline-block;
+    padding: 10px 0 0 10px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    box-sizing: border-box;
+}
+
+.main-article__image {
+    padding: 20px;
+    display: block;
+    transition: 1s;
+}
+
+.main-article__main-title {
+    width: 100%;
+    padding-top: 10px;
+    column-count: 3;
+    column-rule: 1px solid black;
+    border-top: 1px solid black;
+}
+
+input#small-font-size:checked ~ .content .article__text {
+    font-size: 80%;
+}
+
+input#medium-font-size:checked ~ .content .article__text {
+    font-size: 100%;
+}
+
+input#large-font-size:checked ~ .content .article__text {
+    font-size: 140%;
+}
+
+input#arial-font-family:checked ~ .content .article__text {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input#times-font-family:checked ~ .content .article__text {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input#verdana-font-family:checked ~ .content .article__text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input#dark-theme:checked ~ .content {
+    background-image: none;
+    background-color: black;
+    color: blanchedalmond;
+    transition: 1s;
+}
+
+
+input#dark-theme:checked ~ .content .columns {
+    column-rule: 2px solid blanchedalmond;
+}
+
+input#dark-theme:checked ~ .content .columns .left-side {
+    column-rule: 1px solid blanchedalmond;
+}
+
+input#dark-theme:checked ~ .content .main-article__main-title {
+    column-rule: 1px solid blanchedalmond;
+}
+
+input#dark-theme:checked ~ .content header {
+    border-bottom: 1px solid blanchedalmond;
+}
+
+input#dark-theme:checked ~ .content .info  {
+    border: 1px solid blanchedalmond;
+}
+
+input#dark-theme:checked ~ .content .separator {
+    border-top: 1px solid blanchedalmond;
+    border-bottom: 1px solid blanchedalmond;
+}
+
+input#dark-theme:checked ~ .content .columns {
+    border-top: 1px solid blanchedalmond;
+}
+
+input#dark-theme:checked ~ .content {
+    border-bottom: 1px solid blanchedalmond;
+}
+
+input#dark-theme:checked ~ .content article .article__header {
+    border-bottom: 1px solid red;
+}
+
+input#dark-theme:checked ~ .content .main-article__image {
+    filter: invert(100%);
+    transition: 1s;
+}
+
+input#dark-theme:checked ~ .content .main-article {
+    border-top: 1px solid blanchedalmond;
+    border-left: 1px solid blanchedalmond;
+}
+
+input#dark-theme:checked ~ .content .main-article__main-title {
+    border-top: 1px solid blanchedalmond;
+}
+
+
+
