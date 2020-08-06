@@ -60,11 +60,8 @@ article {
 }
 
 .content {
-    margin: 3px 0;
-    height: 1500px;
-    overflow: hidden;
+    margin: 0;
     transition: 1s;
-    border-bottom: 1px solid black;;;
 }
 
 .separator {
@@ -81,21 +78,26 @@ article {
 
 .columns {
     column-count: 2;
-    column-rule: 2px solid black;
-    border-top: 1px solid black;;
-    border-bottom: 1px solid black;
+    height: 1500px;
     margin-top: 2px;
     padding-top: 3px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .left-side {
+    height: 100%;
     float: left;
     column-count: 4;
     column-rule: 1px solid black;
+    column-fill: auto;
+    overflow: hidden;
 }
 
 .right-side {
+    height: 100%;
     display: inline-block;
+    overflow: hidden;
 }
 
 .right-side__header {
@@ -134,16 +136,16 @@ article {
     border-top: 1px solid black;
 }
 
-input#small-font-size:checked ~ .content .article__text {
-    font-size: 80%;
+input#small-font-size:checked ~ .content article {
+    font-size: 0.8em;
 }
 
-input#medium-font-size:checked ~ .content .article__text {
-    font-size: 100%;
+input#medium-font-size:checked ~ .content article {
+    font-size: 1em;
 }
 
-input#large-font-size:checked ~ .content .article__text {
-    font-size: 140%;
+input#large-font-size:checked ~ .content article {
+    font-size: 1.4em;
 }
 
 input#arial-font-family:checked ~ .content .article__text {
